@@ -4,6 +4,12 @@ const API = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
 });
 
+export interface SignUpPayload {
+    name: string;
+    email: string;
+    password: string;
+}
+
 API.interceptors.request.use((req) => {
     const token = localStorage.getItem("token");
     if (token) req.headers.Authorization = `Bearer ${token}`;
@@ -20,6 +26,8 @@ export const login = async (email: string, password: string): Promise<AuthRespon
     return data;
 };
 
-export const signup = (data) => API.post("/auth/signup", data);
+export const signup = async (payload: SignUpPayload): Promise<void> => {
+    await API.post("/auth/signup", payload);
+};
 
 export const fetchProjects = () => API.get("/projects");

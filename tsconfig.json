@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "jsx": "react-jsx", // Use this for React 17+ projects
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "baseUrl": "./src", // Adjust to your project structure
+        "paths": {
+            "*": [
+                "*"
+            ]
+        },
+        "target": "ES6",
+        "module": "ESNext"
+    }
+}

@@ -1,16 +1,12 @@
 import React, { useState } from "react";
+import "./auth.css";
 
-interface LoginProps {
-    onLogin: (email: string, password: string) => void;
-}
-
-const Login: React.FC<LoginProps> = ({ onLogin }) => {
+const Login: React.FC = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        onLogin(email, password);
     };
 
     return (
