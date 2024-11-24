@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./auth.css";
+import React, { useState } from 'react';
+import './auth.css';
 
 const Login: React.FC = () => {
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

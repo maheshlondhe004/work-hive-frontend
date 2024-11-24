@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const API = axios.create({
     baseURL: process.env.REACT_APP_API_URL,
@@ -11,7 +11,7 @@ export interface SignUpPayload {
 }
 
 API.interceptors.request.use((req) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token');
     if (token) req.headers.Authorization = `Bearer ${token}`;
     return req;
 });
@@ -21,13 +21,16 @@ export interface AuthResponse {
     token: string;
 }
 
-export const login = async (email: string, password: string): Promise<AuthResponse> => {
-    const { data } = await API.post("/auth/login", { email, password });
+export const login = async (
+    email: string,
+    password: string,
+): Promise<AuthResponse> => {
+    const { data } = await API.post('/auth/login', { email, password });
     return data;
 };
 
 export const signup = async (payload: SignUpPayload): Promise<void> => {
-    await API.post("/auth/signup", payload);
+    await API.post('/auth/signup', payload);
 };
 
-export const fetchProjects = () => API.get("/projects");
+export const fetchProjects = () => API.get('/projects');

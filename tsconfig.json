@@ -6,11 +6,10 @@
         "moduleResolution": "node",
         "baseUrl": "./src", // Adjust to your project structure
         "paths": {
-            "*": [
-                "*"
-            ]
+            "*": ["*"]
         },
         "target": "ES6",
-        "module": "ESNext"
+        "module": "ESNext",
+        "allowJs": true
     }
 }

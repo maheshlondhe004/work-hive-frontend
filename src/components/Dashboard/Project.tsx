@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { fetchProjects } from "../../services/api";
+import React, { useEffect, useState } from 'react';
+import { fetchProjects } from '../../services/api';
 
 interface Project {
     id: string;
@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data : any= await fetchProjects();
+            const data: any = await fetchProjects();
             setProjects(data);
         };
         fetchData();

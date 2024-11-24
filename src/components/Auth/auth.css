@@ -50,6 +50,6 @@
     margin: 5px 0;
 }
 
-.signup-container p[style*="color: red"] {
+.signup-container p[style*='color: red'] {
     color: #ff4d4f !important;
 }

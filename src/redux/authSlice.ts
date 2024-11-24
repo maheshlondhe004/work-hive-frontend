@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface User {
     id: string;
@@ -16,18 +16,21 @@ const initialState: AuthState = {
 };
 
 const authSlice = createSlice({
-    name: "auth",
+    name: 'auth',
     initialState,
     reducers: {
-        loginSuccess(state, action: PayloadAction<{ user: User; token: string }>) {
+        loginSuccess(
+            state,
+            action: PayloadAction<{ user: User; token: string }>,
+        ) {
             state.user = action.payload.user;
             state.token = action.payload.token;
-            localStorage.setItem("token", action.payload.token);
+            localStorage.setItem('token', action.payload.token);
         },
         logout(state) {
             state.user = null;
             state.token = null;
-            localStorage.removeItem("token");
+            localStorage.removeItem('token');
         },
     },
 });
