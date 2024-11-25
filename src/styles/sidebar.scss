@@ -1,0 +1,22 @@
+@import './variables';
+
+.sidebar {
+    width: 250px; // Fixed width for the sidebar
+    background-color: $secondary-color; // Secondary color
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: lighten($secondary-color, 10%); // Slightly lighter blue on hover
+    }
+}

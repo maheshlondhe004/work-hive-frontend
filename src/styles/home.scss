@@ -1,0 +1,26 @@
+@import './variables';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $background-color;
+
+    .layout {
+        display: flex;
+        flex: 1;
+        height: 100%;
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px;
+        background-color: $background-color;
+        color: $secondary-color;
+        overflow-y: auto;
+
+        h1 {
+            color: $primary-color;
+        }
+    }
+}
