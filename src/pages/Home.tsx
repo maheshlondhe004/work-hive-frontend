@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import '../styles/home.scss';
 import TopBar from '../components/TopBar';
 import Sidebar from '../components/Sidebar';
@@ -26,6 +27,7 @@ const Home: React.FC = () => {
                 {/* Main Content */}
                 <div className="content">
                     <h1>Welcome to Work Hive</h1>
+                    <Outlet />
                 </div>
             </div>
 

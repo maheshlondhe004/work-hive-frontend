@@ -1,12 +1,28 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/sidebar.scss';
 
 const Sidebar: React.FC = () => {
     return (
         <div className="sidebar">
-            <div className="menu-item">Projects</div>
-            <div className="menu-item">Active Sprints</div>
-            <div className="menu-item">Backlog</div>
+            <NavLink
+                to="/home/projects"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+                Projects
+            </NavLink>
+            <NavLink
+                to="/home/active-sprint"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+                Active Sprint
+            </NavLink>
+            <NavLink
+                to="/home/backlog"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+                Backlog
+            </NavLink>
         </div>
     );
 };

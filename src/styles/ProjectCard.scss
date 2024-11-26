@@ -1,0 +1,24 @@
+@import './variables';
+
+.project-card {
+    border: 1px solid $tertiary-color;
+    background-color: $background-color;
+    padding: 15px;
+    border-radius: 8px;
+
+    h3 {
+        color: $primary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $secondary-color;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+        color: $tertiary-color;
+    }
+}
